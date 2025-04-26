@@ -15,10 +15,10 @@
 
             <li>
                 <a href="sample.html">Pay Bills</a>
-                <div>
+                <!-- <div>
                     <a href="#">Pay Now</a>
                     <a href="#">Bill History</a>
-                </div>
+                </div> -->
             </li>
 
             <li>
@@ -46,7 +46,76 @@
             </li>
         </ul>
     </header>
-    <main></main>
+    <main>
+        <div id="new_user">
+
+            <div id="new_user_greet">
+                <h1>Welcome to EBM</h1>
+                <h2>Let's get you started</h2>
+            </div>
+            <div id="new_consumer_details">
+                <h3>Consumer Details</h3>
+                <ul>
+                    <li>
+                        <label for="consumer_id">Consumer ID</label>
+                        <input type="number" id="Consumer_id" name="consumer_id" maxlength="13" placeholder="Error generating Consumer ID!" required>
+                    </li>
+                    <li>
+                        <label for="bill_number">Bill no. </label>
+                        <input type="nummber" id="bill_number" name="bill_number" maxlength="5" placeholder="Error generating Bill no.!" required>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="new_user_details">
+                <h3>User Details</h3>
+                <ul>
+                    <li>
+                        <label for="title">Title</label>
+                        <select id="title" name="title" required>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Ms">Ms</option>
+                        </select>
+                    </li>
+
+                    <li id="new_user_name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="number" id="country_code" name="country_code" placeholder="Enter your country code" length="2" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </li>
+                </ul>
+            </div>
+            <div id="new_login_details">
+                <h3>Login Details</h3>
+                <ul>
+                    <li>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </li>
+                    <li>
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter your password" required>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
     <footer></footer>
 
 </body>
