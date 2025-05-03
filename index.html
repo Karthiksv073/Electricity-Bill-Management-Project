@@ -4,99 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MM Events | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        workspaces/Electricity-Bill-Management-Project/style.css */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    animation: slideDown 1s ease-in-out;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #edf2f4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+main {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+}
+
+#hero h1 span {
+    color: #fff;
+    text-shadow: 0 0 10px #00bcd4;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0288d1;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ddd;
+    font-size: 0.9rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+    </style>
 </head>
 <body>
     <header>
         <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="#">About</a>
-            </li>
-
-            <li>
-                <a href="#" id="red" onclick="f1()">Services</a>
-            </li>
-
-            <li>
-                <a href="sample.html">Gallery</a>
-            </li>
-
-            <li>
-                <a href="#">Reviews</a>
-            </li>
-
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
-
-            <li>
-                <a href="#">Login</a>
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" id="red" onclick="f1()">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
         </ul>
     </header>
     <main>
-        <section id="new_user">
-            <section id="new_user_greet">
-                <h1>Welcome to MM Events</h1>
-                <h2>Let's get you started</h2>
-            </section>
-            <section id="new_consumer_details">
-                <h3>Consumer Details</h3>
-                <section>
-                    <label for="consumer_id">Consumer ID:</label>
-                    <input type="number" id="Consumer_id" name="consumer_id" maxlength="13" placeholder="Error generating Consumer ID!" required>
-                </section>
-                <section>
-                    <label for="bill_number">Bill no.:</label>
-                    <input type="number" id="bill_number" name="bill_number" maxlength="5" placeholder="Error generating Bill no.!" required>
-                </section>
-            </section>
-            <section id="new_user_details">
-                <h3>User Details</h3>
-                <section>
-                    <label for="title">Title: </label>
-                    <select id="title" name="title" required>
-                        <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="Ms">Ms</option>
-                    </select>
-                </section>
-                <section id="new_user_name">
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </section>
-                <section>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </section>
-                <section>
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="country_code" name="country_code" placeholder="+1" maxlength="3" required>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="10" required>
-                </section>
-            </section>
-            <section id="new_login_details">
-                <h3>Login Details</h3>
-                <section>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                </section>
-                <section>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </section>
-                <section>
-                    <label for="confirm_password">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter your password" required>
-                </section>
-            </section>
+        <section id="hero">
+            <h1>Welcome to <span>MM Events</span></h1>
+            <p>Creating unforgettable moments for every occasion.</p>
+            <a href="gallery.html" class="cta-button">Explore Gallery</a>
         </section>
     </main>
-    <footer></footer>
-
-</body>
+    <footer>
+        <p>&copy; 2025 MM Events. All rights reserved.</p>
+    </footer>
+</body></body>
 </html>
