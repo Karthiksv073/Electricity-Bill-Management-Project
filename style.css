@@ -9,35 +9,24 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(#2D00F7,#6A00F4,#8900F2,#A100F2,#B100E8,#BC00DD,#D100D1,#DB00B6,#E500A4,#F20089);
-    animation: gradient-flow 5s ease-in-out infinite;
+    background: linear-gradient(#000000 50%,lightBlue);
 }
   
-  @keyframes gradient-flow {
-    0% { background-position: 0vw 0vh; }
-    50% { background-position: 100vw 100vh;  }
-    75% { background-position: 0vw 100vh; }
-    100%{ background-position: 100vw, 0vh;}
-  }
   
 header{
     width: 100vw;
-    height: 10vh;
-    background: linear-gradient(90deg,#2b2d42 0%, #4881e4 50%, #2b2d42 100% );
+    height: 10%;
+    background-color: transparent;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-size: 100% 10%;
     border: 0.5em solid transparent;
     box-sizing: border-box;
-    animation: gradient-pulse 10s ease-in-out infinite;
+    /* flex-shrink: 100; */
 }
 
-@keyframes gradient-pulse {
-    0% { background-position: 0vw 50vh; }
-    50% { background-position: 100vw 50vh; }
-    100% { background-position: 0vw 50vh; }
-  }
 ul{
     width: 90vw;
     display: flex;
@@ -54,26 +43,27 @@ li a{
     color: #edf2f4;
     text-decoration: none;
     border-radius: 1em;
-    flex-shrink: 20;
+    flex-grow: 20;
 }
     
 
 main{
     width: 97vw;
-    height: 75vh;
-    background:  linear-gradient(100deg,#8d99ae,#2b2d42);
+    height: 75%;
+    background-color: transparent;
     border-radius:2vh;
+    display: flex;
     margin: 2vh;
     border:  1vh ridge #000000;
     box-sizing: border-box;
-    /* animation: gradient-flow 5s ease-in-out infinite; */
+    /* animation: gradient-flow 5s linear 1; */
 
+}
+section{
+    display: none;
 }
 footer{
     width: 100vw;
-    height: 12vh;
-    background-color: #000000;
-    border-radius:1vh;
-    box-sizing: border-box;
+    height: 15%;
+    background-color: transparent;
 }
-
